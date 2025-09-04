@@ -5,7 +5,7 @@ const OUTPUT_DIRECTORY = path.resolve(__dirname, 'dist');
 module.exports = {
   entry: './src/index.js',
   output: {
-    filename: 'bundle.js',
+    filename: 'app.bundle.js', // Updated output filename for clarity
     path: OUTPUT_DIRECTORY,
     publicPath: '/dist/' // Changed publicPath to include the output directory
   },
