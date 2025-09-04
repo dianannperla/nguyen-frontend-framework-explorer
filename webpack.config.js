@@ -12,7 +12,8 @@ module.exports = {
   devServer: {
     contentBase: OUTPUT_DIRECTORY,
     compress: true,
-    port: 9000
+    port: 9000,
+    allowedHosts: 'all' // Added allowedHosts for better compatibility
   },
   module: {
     rules: [
