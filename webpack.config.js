@@ -7,7 +7,7 @@ module.exports = {
   output: {
     filename: 'app.bundle.js', // Updated output filename for clarity
     path: OUTPUT_DIRECTORY,
-    publicPath: '/dist/' // Changed publicPath to include the output directory
+    publicPath: '/' + OUTPUT_DIRECTORY.split(path.sep).pop() + '/' // Changed publicPath for consistency
   },
   devServer: {
     contentBase: OUTPUT_DIRECTORY,
@@ -18,8 +18,8 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /(\.js|\.jsx)$/, 
-        exclude: /node_modules/, 
+        test: /(?:\.js|\.jsx)$/,
+        exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
           options: { presets: ['@babel/preset-env', '@babel/preset-react'] }
