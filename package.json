@@ -1,6 +1,6 @@
 {
   "name": "nguyen-frontend-framework-explorer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Explore and compare various frontend frameworks",
   "main": "index.js",
   "scripts": {
