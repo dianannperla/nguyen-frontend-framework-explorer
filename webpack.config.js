@@ -7,7 +7,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: OUTPUT_DIRECTORY,
-    publicPath: '/' // Added publicPath for output accessibility
+    publicPath: '/dist/' // Changed publicPath to include the output directory
   },
   devServer: {
     contentBase: OUTPUT_DIRECTORY,
