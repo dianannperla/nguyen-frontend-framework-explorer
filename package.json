@@ -1,7 +1,7 @@
 {
   "name": "nguyen-frontend-framework-explorer",
   "version": "1.0.0",
-  "description": "Khám phá và so sánh các framework frontend",
+  "description": "Explore and compare various frontend frameworks",
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --mode development",
