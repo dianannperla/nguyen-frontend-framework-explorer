@@ -12,13 +12,13 @@ module.exports = {
   devServer: {
     contentBase: OUTPUT_DIRECTORY,
     compress: true,
-    port: 9000,
+    port: 8080, // Updated port for standardization
     allowedHosts: 'all' // Added allowedHosts for better compatibility
   },
   module: {
     rules: [
       {
-        test: /\.js$/, 
+        test: /\.(js|jsx)$/, 
         exclude: /node_modules/, 
         use: {
           loader: 'babel-loader',
