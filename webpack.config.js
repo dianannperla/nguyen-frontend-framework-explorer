@@ -18,13 +18,19 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /(?:\.js|\.jsx)$/,
-        exclude: /node_modules/,
+        test: /(?:\.js|\.jsx)$/, 
+        exclude: /node_modules/, 
         use: {
           loader: 'babel-loader',
           options: { presets: ['@babel/preset-env', '@babel/preset-react'] }
         }
       }
     ]
+  },
+  optimization: { // Added optimization settings
+    minimize: true,
+    splitChunks: {
+      chunks: 'all',
+    },
   }
 };
