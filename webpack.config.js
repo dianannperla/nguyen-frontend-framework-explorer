@@ -1,20 +1,22 @@
 const path = require('path');
 
+const OUTPUT_DIRECTORY = path.resolve(__dirname, 'dist');
+
 module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: OUTPUT_DIRECTORY,
   },
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: OUTPUT_DIRECTORY,
     compress: true,
     port: 9000
   },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.js$/, 
         exclude: /node_modules/, 
         use: {
           loader: 'babel-loader',
